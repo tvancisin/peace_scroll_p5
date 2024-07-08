@@ -201,11 +201,11 @@ Promise.all([
     united_states = four_group[0][1],
     france = four_group[1][1],
     united_nations = four_group[2][1];
-    united_kingdom = four_group[3][1],
+  united_kingdom = four_group[3][1],
     china = four_group[4][1],
     russia = four_group[5][1];
 
-    console.log(four_group);
+  console.log(four_group);
 
   //data for multiline chart
   const multiline_data = d3.groups(files[3], d => d.global_actor, d => +d.year, d => d.AgtId);
@@ -447,7 +447,7 @@ Promise.all([
             id="publications" src="img/m5.png" /></a>`)
 
 
-      
+
     }
     else if (selected_actor == "China") {
       d3.select(".council_separator").text("China and other UN Security Council Permanent Members")
@@ -520,6 +520,19 @@ Promise.all([
   }
 
   prepare_data(russia, ru_percent_bar, "Russia")
+
+
+  //loading screen
+  d3.select("#init_load").html(`<button id="remove-screen-btn">Click to Enter</button>`)
+  d3.select("#remove-screen-btn").style("visibility", "visible")
+
+  d3.select("#remove-screen-btn").on("click", function () {
+    d3.select("body").style("overflow", "auto")
+    window.scrollTo(0, 0);
+    d3.selectAll('#header, #story').style("visibility", "visible");
+    d3.selectAll('#initial_screen, #remove-screen-btn').style("visibility", "hidden");
+  })
+
 
   // let scrollerVis = new ScrollerVis({ storyElement: '#story', mapElement: 'map' }, data_for_scroll, year_division, the_array);
   // helper function to map over dom selection
