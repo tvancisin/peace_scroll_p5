@@ -291,8 +291,8 @@ class ScrollerVis {
       const [x, y, k] = points[i];
       multiline_path.style("stroke", ({ z }) => z === k ? "white" : "black").filter(({ z }) => z === k).raise();
       dot.attr("transform", `translate(${x},${y})`);
-      console.log(x,width);
-      if (x >= width/2) {
+      console.log(x, width);
+      if (x >= width / 2) {
         dot.select("text").attr("text-anchor", "end")
       }
       else {
@@ -494,6 +494,38 @@ class ScrollerVis {
         'state-fills',
         'fill-color',
         ['match', ['get', 'ADMIN'], 'China', 'white', '#7B8AD6']
+      );
+    }
+    else if (this.selected_actor == "France") {
+      map.setFilter('state-fills', ['in', 'ADMIN', ...vis.country_array]);
+      map.setPaintProperty(
+        'state-fills',
+        'fill-color',
+        ['match', ['get', 'ADMIN'], 'France', 'white', '#7B8AD6']
+      );
+    }
+    else if (this.selected_actor == "United Kingdom") {
+      map.setFilter('state-fills', ['in', 'ADMIN', ...vis.country_array]);
+      map.setPaintProperty(
+        'state-fills',
+        'fill-color',
+        ['match', ['get', 'ADMIN'], 'United Kingdom', 'white', '#7B8AD6']
+      );
+    }
+    else if (this.selected_actor == "United States") {
+      map.setFilter('state-fills', ['in', 'ADMIN', ...vis.country_array]);
+      map.setPaintProperty(
+        'state-fills',
+        'fill-color',
+        ['match', ['get', 'ADMIN'], 'United States of America', 'white', '#7B8AD6']
+      );
+    }
+    else if (this.selected_actor == "United Nations") {
+      map.setFilter('state-fills', ['in', 'ADMIN', ...vis.country_array]);
+      map.setPaintProperty(
+        'state-fills',
+        'fill-color',
+        ['match', ['get', 'ADMIN'], 'United States of America', '#7B8AD6', '#7B8AD6']
       );
     }
 

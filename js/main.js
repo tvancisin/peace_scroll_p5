@@ -272,11 +272,11 @@ Promise.all([
   })
   d3.select("#france").on("click", function () {
     d3.select("#separator").style("background-image", "url(img/france.PNG)")
-    prepare_data(france, fr_percent_bar, "China")
+    prepare_data(france, fr_percent_bar, "France")
   })
   d3.select("#us").on("click", function () {
     d3.select("#separator").style("background-image", "url(img/us.PNG)")
-    prepare_data(united_states, us_percent_bar, "China")
+    prepare_data(united_states, us_percent_bar, "United States")
   })
 
   let scrollerVis;
@@ -512,6 +512,47 @@ Promise.all([
       d3.select("#vik5").html(`<a href="https://peacerep.org/publication/russia-and-china-in-liberal-peacebuilding/" target="_blank"><img
             id="publications" src="img/c5.PNG" /></a>`)
 
+    }
+    else if (selected_actor == "United States" || selected_actor == "France" || selected_actor == "United Nations" || selected_actor == "United Kingdom") {
+      d3.select(".council_separator").text("Fill Text.")
+      d3.select(".p1").html(`Fill Text</br></br><span class="dot"></span><p id="leg_p">
+      Individual peace agreements(hover over for more detail)</p>`)
+      d3.select(".p2").html(`Fill Text.</br></br><span class="dot1"></span><p id="leg_p">Peace agreements 
+      resulting from large international conferences or UNSC resolutions.</p>`)
+      d3.select(".p3").html(`Fill Text.</br></br>
+      <span class="dot1"></span><p id="leg_p">Peace agreements signed by ... and 
+      the UN or all other permanent members of the UNSC.`)
+
+      d3.select(".p4").html(`Fill Text.</br></br><span class="rec"></span><p id="leg_p">Overall agreements.</p>
+      <span class="rec1"></span><p id="leg_p">... agreements.</p>`)
+
+      d3.select(".p6").html(`Fill Text.</br></br> For more details on the categories see
+      <a href="https://www.peaceagreements.org/files/Definitions_v7.pdf" target="_blank">here</a>.`)
+
+      d3.select(".p8").html(`Fill Text.</br></br><span class="dot2"></span><p id="leg_p">Overall agreements (% of all).</p>
+      <span class="dot3"></span><p id="leg_p">... signature (% of all signed by ...).</p>`)
+      d3.select(".p9").html(`Fill Text.</br></br><span class="dot2">
+      </span><p id="leg_p">Overall agreements (% of all).</p>
+      <span class="dot3"></span><p id="leg_p">... signature (% of all signed by ...).</p>`)
+      d3.select(".p10").html(`Fill Text.</br></br><span class="dot2">
+      </span><p id="leg_p">Overall agreements (% of all).</p>
+      <span class="dot3"></span><p id="leg_p">... signature (% of all signed by ...).</p>`)
+
+      d3.select(".p12").html(`Fill Text.`)
+      d3.select(".p13").html(`Fill Text.`)
+
+      d3.select("#research_header").text(`Fill Text:`)
+
+      d3.select("#vik1").html(`<a href="https://peacerep.org/publication/third-parties-peace-agreements-data-trends/" target="_blank"><img
+            id="publications" src="img/c1.PNG" /></a>`)
+      d3.select("#vik2").html(`<a href="https://peacerep.org/publication/chinas-stance-on-the-war-in-ukraine/"
+          target="_blank"><img id="publications" src="img/c2.PNG" /></a>`)
+      d3.select("#vik3").html(`<a href="https://peacerep.org/publication/domestic-actors-china-international-conflict-management/"
+          target="_blank"><img id="publications" src="img/c3.PNG" /></a>`)
+      d3.select("#vik4").html(`<a href="https://peacerep.org/publication/global-china-and-the-quest-for-peace-in-bosnia-and-herzegovina/" target="_blank"><img
+            id="publications" src="img/c4.PNG" /></a>`)
+      d3.select("#vik5").html(`<a href="https://peacerep.org/publication/russia-and-china-in-liberal-peacebuilding/" target="_blank"><img
+            id="publications" src="img/c5.PNG" /></a>`)
     }
 
     scrollerVis = new ScrollerVis({ storyElement: '#story', mapElement: 'map' }, data,
