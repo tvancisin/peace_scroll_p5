@@ -165,7 +165,7 @@ Promise.all([
   d3.csv("data/all_update.csv"),
   d3.csv("data/loc_correction.csv"),
   // d3.csv("data/agts_with_rus_uk_un_china.csv"),
-  d3.csv("data/v8_all_agts_with_uk_rus_un_china.csv"),
+  d3.csv("data/agts_United_States_France_United_Nations_United_Kingdom_China_Russia.csv"),
   // d3.csv("data/v7_paax_all_with_third.csv"),
   d3.csv("data/paax_practical_third_labelled_signatories.csv"),
 ]).then(function (files) {
@@ -198,10 +198,12 @@ Promise.all([
 
   //four actors division
   let four_group = d3.groups(files[3], (d) => d.global_actor),
-    russia = four_group[0][1],
-    united_kingdom = four_group[1][1],
-    china = four_group[2][1],
-    united_nations = four_group[3][1];
+    united_states = four_group[0][1],
+    france = four_group[1][1],
+    united_nations = four_group[2][1];
+    united_kingdom = four_group[3][1],
+    china = four_group[4][1],
+    russia = four_group[5][1];
 
     console.log(four_group);
 
@@ -225,6 +227,8 @@ Promise.all([
   const un_stage_agt = d3.groups(united_nations, d => d.stage_label, d => d.AgtId);
   const uk_stage_agt = d3.groups(united_kingdom, d => d.stage_label, d => d.AgtId);
   const ch_stage_agt = d3.groups(china, d => d.stage_label, d => d.AgtId);
+  const fr_stage_agt = d3.groups(france, d => d.stage_label, d => d.AgtId);
+  const us_stage_agt = d3.groups(united_states, d => d.stage_label, d => d.AgtId);
   //generate objects with percentages
   const object_calc = function (data) {
     let totalagts = 0;
@@ -246,10 +250,12 @@ Promise.all([
   let uk_percent_bar = object_calc(uk_stage_agt)
   let un_percent_bar = object_calc(un_stage_agt)
   let ch_percent_bar = object_calc(ch_stage_agt)
+  let fr_percent_bar = object_calc(fr_stage_agt)
+  let us_percent_bar = object_calc(us_stage_agt)
 
   //dropdown functions for different actors
   d3.select("#russia").on("click", function () {
-    d3.select("#separator").style("background-image", "url(img/ru.PNG)")
+    d3.select("#separator").style("background-image", "url(img/russia.PNG)")
     prepare_data(russia, ru_percent_bar, "Russia")
   })
   d3.select("#kingdom").on("click", function () {
@@ -261,8 +267,16 @@ Promise.all([
     prepare_data(united_nations, un_percent_bar, "United Nations")
   })
   d3.select("#china").on("click", function () {
-    d3.select("#separator").style("background-image", "url(img/ch.PNG)")
+    d3.select("#separator").style("background-image", "url(img/china.PNG)")
     prepare_data(china, ch_percent_bar, "China")
+  })
+  d3.select("#france").on("click", function () {
+    d3.select("#separator").style("background-image", "url(img/france.PNG)")
+    prepare_data(france, fr_percent_bar, "China")
+  })
+  d3.select("#us").on("click", function () {
+    d3.select("#separator").style("background-image", "url(img/us.PNG)")
+    prepare_data(united_states, us_percent_bar, "China")
   })
 
   let scrollerVis;

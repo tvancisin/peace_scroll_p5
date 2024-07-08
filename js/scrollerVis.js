@@ -477,7 +477,6 @@ class ScrollerVis {
   step1(direction) {
     const vis = this;
     console.log("step1", direction);
-    console.log(vis.country_array);
 
     if (this.selected_actor == "Russia") {
       const countriesToRemove = ['France', 'United Kingdom', 'United States of America'];
@@ -576,6 +575,9 @@ class ScrollerVis {
               china_classes = "my_circles"
             }
             return china_classes
+          }
+          else {
+            return "my_circles"
           }
         })
         .attr('r', 10)
