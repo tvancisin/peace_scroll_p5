@@ -410,7 +410,7 @@ Promise.all([
       d3.select(".p8").html(`Compared with all agreements, Russia signs more pre-negotiation agreements 
       and less comprehensive and implementation agreements.</br></br><span class="dot2"></span><p id="leg_p">Overall agreements (% of all).</p>
       <span class="dot3"></span><p id="leg_p">Russian signature (% of all signed by Russia).</p>`)
-      d3.select(".p9").html(`Pre-negotiation agreements represent 30% of all agreements with 
+      d3.select(".p9").html(`Pre-negotiation agreements represent 29% of all agreements with 
       third-party signatories, but 35% of all agreements signed by Russia.</br></br><span class="dot2">
       </span><p id="leg_p">Overall agreements (% of all).</p>
       <span class="dot3"></span><p id="leg_p">Russian signature (% of all signed by Russia).</p>`)
@@ -468,9 +468,9 @@ Promise.all([
       the UN or all other permanent members of the UNSC.`)
 
       d3.select(".p4").html(`China is the least prolific third-party signatory of 
-      peace agreements of all UN Security Council permanent members. China signed 38 
+      peace agreements of all UN Security Council permanent members. China signed 39 
       agreements as a third-party since 1990, in comparison to Russian 134 signatures 
-      and the US 127 signatures.</br></br><span class="rec"></span><p id="leg_p">Overall agreements.</p>
+      and the US 132 signatures.</br></br><span class="rec"></span><p id="leg_p">Overall agreements.</p>
       <span class="rec1"></span><p id="leg_p">Chinese agreements.</p>`)
 
       d3.select(".p6").html(`Chinese involvement as a third-party signatory seems to 
@@ -483,13 +483,13 @@ Promise.all([
       implementation agreements, and less ceasefires and partial ones. .</br></br><span class="dot2"></span><p id="leg_p">Overall agreements (% of all).</p>
       <span class="dot3"></span><p id="leg_p">Chinese signature (% of all signed by China).</p>`)
       d3.select(".p9").html(`Comprehensive agreements 
-      present only 6% of all agreements signed by third-parties, but amount to 11% of all agreements 
-      signed by China.</br></br> Similarly, 32% of all agreements signed by China are implementation agreements, 
+      present only 6% of all agreements signed by third-parties, but amount to 10% of all agreements 
+      signed by China.</br></br> Similarly, 31% of all agreements signed by China are implementation agreements, 
       but the overall proportion of such agreements is 20%.</br></br><span class="dot2">
       </span><p id="leg_p">Overall agreements (% of all).</p>
       <span class="dot3"></span><p id="leg_p">Chinese signature (% of all signed by China).</p>`)
       d3.select(".p10").html(`In contrast, only 8% of all agreements signed by China are ceasefires, 
-      with the overall proportion of such agreements at 18%.</br></br><span class="dot2">
+      with the overall proportion of such agreements at 19%.</br></br><span class="dot2">
       </span><p id="leg_p">Overall agreements (% of all).</p>
       <span class="dot3"></span><p id="leg_p">Chinese signature (% of all signed by China).</p>`)
 
