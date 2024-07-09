@@ -487,6 +487,10 @@ class ScrollerVis {
         'fill-color',
         ['match', ['get', 'ADMIN'], 'Russia', 'white', '#7B8AD6']
       );
+      map.flyTo({
+        center: [70, 40],
+        essential: true // this animation is considered essential with respect to prefers-reduced-motion
+    });
     }
     else if (this.selected_actor == "China") {
       map.setFilter('state-fills', ['in', 'ADMIN', ...vis.country_array]);
@@ -495,6 +499,10 @@ class ScrollerVis {
         'fill-color',
         ['match', ['get', 'ADMIN'], 'China', 'white', '#7B8AD6']
       );
+      map.flyTo({
+        center: [100, 20],
+        essential: true // this animation is considered essential with respect to prefers-reduced-motion
+    });
     }
     else if (this.selected_actor == "France") {
       map.setFilter('state-fills', ['in', 'ADMIN', ...vis.country_array]);
@@ -503,6 +511,10 @@ class ScrollerVis {
         'fill-color',
         ['match', ['get', 'ADMIN'], 'France', 'white', '#7B8AD6']
       );
+      map.flyTo({
+        center: [0, 40],
+        essential: true // this animation is considered essential with respect to prefers-reduced-motion
+    });
     }
     else if (this.selected_actor == "United Kingdom") {
       map.setFilter('state-fills', ['in', 'ADMIN', ...vis.country_array]);
@@ -511,6 +523,10 @@ class ScrollerVis {
         'fill-color',
         ['match', ['get', 'ADMIN'], 'United Kingdom', 'white', '#7B8AD6']
       );
+      map.flyTo({
+        center: [0, 45],
+        essential: true // this animation is considered essential with respect to prefers-reduced-motion
+    });
     }
     else if (this.selected_actor == "United States") {
       map.setFilter('state-fills', ['in', 'ADMIN', ...vis.country_array]);
@@ -519,6 +535,10 @@ class ScrollerVis {
         'fill-color',
         ['match', ['get', 'ADMIN'], 'United States of America', 'white', '#7B8AD6']
       );
+      map.flyTo({
+        center: [-90, 45],
+        essential: true // this animation is considered essential with respect to prefers-reduced-motion
+    });
     }
     else if (this.selected_actor == "United Nations") {
       map.setFilter('state-fills', ['in', 'ADMIN', ...vis.country_array]);
